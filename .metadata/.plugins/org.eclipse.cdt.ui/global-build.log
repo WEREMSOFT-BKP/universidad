@@ -95,3 +95,38 @@ src\MaimonidesAlgoritmosYEstructuras.o: In function `main':
 C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/MaimonidesAlgoritmosYEstructuras.cpp:4: multiple definition of `main'
 src\ej104.o:C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/ej104.cpp:11: first defined here
 collect2.exe: error: ld returned 1 exit status
+16:21:58 **** Incremental Build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" "src\\ej104.o" -lAyE 
+src\ej104.o: In function `ZNSt11char_traitsIcE6lengthEPKc':
+C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/ej104.cpp:11: multiple definition of `main'
+src\MaimonidesAlgoritmosYEstructuras.o:C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/MaimonidesAlgoritmosYEstructuras.cpp:4: first defined here
+collect2.exe: error: ld returned 1 exit status
+16:22:22 **** Clean-only build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+rm -rf MaimonidesAlgoritmosYEstructuras.exe src/MaimonidesAlgoritmosYEstructuras.d src/MaimonidesAlgoritmosYEstructuras.o 
+16:22:22 **** Rebuild of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+16:30:37 **** Rebuild of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
+Info: Nothing to build for ej104
+16:32:13 **** Incremental Build of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
+Info: Nothing to build for ej104
+Info: Nothing to build for ej104
+16:43:59 **** Incremental Build of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
+16:44:28 **** Incremental Build of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 

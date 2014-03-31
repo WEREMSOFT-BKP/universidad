@@ -1,0 +1,14 @@
+//============================================================================
+// Name        : ej104.cpp
+// Author      : Pablo Weremczuk
+// Version     :
+// Copyright   : Use at your own risk
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+#include "includes\aye.h"
+
+int main()
+{
+	writeLnString("cadorna");
+	return 0;
+}
