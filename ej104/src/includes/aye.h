@@ -17,6 +17,9 @@
 #define writeInteger(x) printf("%i", x)
 #define writeLnInteger(x) printf("%i\n", x)
 
+#define writeShort(x) printf("%i", x)
+#define writeLnShort(x) printf("%i\n", x)
+
 #define writeDouble(x) printf("%5.2f", x)
 #define writeLnDouble(x) printf("%5.2f\n", x)
 
@@ -26,6 +29,8 @@
 using namespace std;
 
 void readInteger(int VAR entero);
+void readShort(short VAR enteroCorto);
+void readLong(long VAR enteroLargo);
 void readDouble(double VAR real);
 void readString(string VAR cadena);
 void readChar(char VAR caracter);

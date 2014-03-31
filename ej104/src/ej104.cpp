@@ -10,10 +10,10 @@
 int main()
 {
 	int dia, mes, anio;
-	double fecha;
+	long int fecha;
 
 	writeLnString("ingrese la fecha en formato AAAAMMDD");
-	readDouble(fecha);
+	readLong(fecha);
 
 	anio = fecha/10000;
 
