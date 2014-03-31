@@ -1,0 +1,7 @@
+#include "inludes\aye.h"
+
+
+int main()
+{
+	writeLnString("cadena de prueba");
+}

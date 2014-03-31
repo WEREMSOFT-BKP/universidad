@@ -1,0 +1,97 @@
+12:04:39 **** Build of configuration Debug for project Test ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:\Programas\eclipse4c++;C:\Program Files (x86)\RSA SecurID Token Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Programas\TortoiseSVN\bin;C:\Programas\nodejs\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Programas\PHPRunTime;C:\ProgramData\ComposerSetup\bin;C:\Programas\MinGW\bin;C:\Programas\Google\google_appengine\]
+12:10:48 **** Clean-only build of configuration Debug for project Test ****
+make clean 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:\Programas\eclipse4c++;C:\Program Files (x86)\RSA SecurID Token Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Programas\TortoiseSVN\bin;C:\Programas\nodejs\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Programas\PHPRunTime;C:\ProgramData\ComposerSetup\bin;C:\Programas\MinGW\bin;C:\Programas\Google\google_appengine\]
+12:13:01 **** Rebuild of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test2.o" "..\\src\\Test2.cpp" 
+g++ -o Test2.exe "src\\Test2.o" 
+src\Test2.o: In function `main':
+C:\Proyectos\Universidad\Test2\Debug/../src/Test2.cpp:5: undefined reference to `writeLnString(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+12:13:44 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -o Test2.exe "src\\Test2.o" -llibs 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -llibs
+collect2.exe: error: ld returned 1 exit status
+12:13:57 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -o Test2.exe "src\\Test2.o" -llibs 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -llibs
+collect2.exe: error: ld returned 1 exit status
+12:14:01 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -o Test2.exe "src\\Test2.o" -llibs 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -llibs
+collect2.exe: error: ld returned 1 exit status
+12:14:04 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -o Test2.exe "src\\Test2.o" -llibs 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -llibs
+collect2.exe: error: ld returned 1 exit status
+12:15:10 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -L../libs -o Test2.exe "src\\Test2.o" 
+src\Test2.o: In function `main':
+C:\Proyectos\Universidad\Test2\Debug/../src/Test2.cpp:5: undefined reference to `writeLnString(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+12:15:35 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test2.o" "..\\src\\Test2.cpp" 
+g++ -L../libs -o Test2.exe "src\\Test2.o" 
+src\Test2.o: In function `main':
+C:\Proyectos\Universidad\Test2\Debug/../src/Test2.cpp:5: undefined reference to `writeLnString(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+12:15:59 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ -L../libs -o Test2.exe "src\\Test2.o" 
+src\Test2.o: In function `main':
+C:\Proyectos\Universidad\Test2\Debug/../src/Test2.cpp:5: undefined reference to `writeLnString(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+12:16:56 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\Test2\\src\\libs" -o Test2.exe "src\\Test2.o" 
+src\Test2.o: In function `main':
+C:\Proyectos\Universidad\Test2\Debug/../src/Test2.cpp:5: undefined reference to `writeLnString(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+12:18:16 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\Test2\\src\\libs" -o Test2.exe "src\\Test2.o" "-lC:\\Proyectos\\Universidad\\Test2\\src\\libs\\libAyE.a" 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -lC:\Proyectos\Universidad\Test2\src\libs\libAyE.a
+collect2.exe: error: ld returned 1 exit status
+12:19:53 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\Test2\\src\\libs" -o Test2.exe "src\\Test2.o" "-lC:\\Proyectos\\Universidad\\Test2\\src\\libs\\libAyE.a" 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -lC:\Proyectos\Universidad\Test2\src\libs\libAyE.a
+collect2.exe: error: ld returned 1 exit status
+12:21:59 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\Test2\\src\\libs" -o Test2.exe "src\\Test2.o" "-lC:\\Proyectos\\Universidad\\Test2\\src\\libs\\libAyE.a" 
+c:/programas/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/ld.exe: cannot find -lC:\Proyectos\Universidad\Test2\src\libs\libAyE.a
+collect2.exe: error: ld returned 1 exit status
+14:32:46 **** Incremental Build of configuration Debug for project Test2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\Proyectos\\Universidad\\Test2\\lib" -o Test2.exe "src\\Test2.o" -lAyE 
+Info: Nothing to build for Test2
+14:41:59 **** Rebuild of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+15:28:12 **** Incremental Build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\ej104.o" "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+src\MaimonidesAlgoritmosYEstructuras.o: In function `main':
+C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/MaimonidesAlgoritmosYEstructuras.cpp:4: multiple definition of `main'
+src\ej104.o:C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/ej104.cpp:11: first defined here
+collect2.exe: error: ld returned 1 exit status

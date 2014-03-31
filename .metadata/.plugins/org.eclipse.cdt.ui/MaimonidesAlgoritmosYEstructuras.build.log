@@ -1,0 +1,12 @@
+15:28:12 **** Incremental Build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\ej104.o" "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+src\MaimonidesAlgoritmosYEstructuras.o: In function `main':
+C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/MaimonidesAlgoritmosYEstructuras.cpp:4: multiple definition of `main'
+src\ej104.o:C:\Proyectos\Universidad\MaimonidesAlgoritmosYEstructuras\Debug/../src/ej104.cpp:11: first defined here
+collect2.exe: error: ld returned 1 exit status
+
+15:28:13 Build Finished (took 1s.3ms)
+
