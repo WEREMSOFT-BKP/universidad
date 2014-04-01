@@ -1371,3 +1371,6 @@ Binding(CTRL+SHIFT+H,
 
 !ENTRY org.eclipse.cdt.core 1 0 2014-04-01 13:42:16.872
 !MESSAGE Indexed 'ej122' (1 sources, 84 headers) in 1.84 sec: 7,835 declarations; 14,385 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.01%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-01 13:56:07.460
+!MESSAGE Indexed 'ej122b' (1 sources, 84 headers) in 1.54 sec: 7,835 declarations; 14,385 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.01%)
