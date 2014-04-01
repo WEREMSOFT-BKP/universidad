@@ -217,3 +217,10 @@ Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
 g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
 Info: Nothing to build for ej104
+Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+Info: Nothing to build for ej104
+13:21:11 **** Rebuild of configuration Debug for project ej106 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej106.o" "..\\src\\ej106.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej106\\lib" -o ej106.exe "src\\ej106.o" -lAyE 
+Info: Nothing to build for ej106
