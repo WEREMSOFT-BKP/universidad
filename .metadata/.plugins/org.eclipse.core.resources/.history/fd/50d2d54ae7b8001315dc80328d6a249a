@@ -1,7 +1,0 @@
-#include "includes\aye.h"
-
-int main()
-{
-	writeLnString("cadorna");
-	return 0;
-}

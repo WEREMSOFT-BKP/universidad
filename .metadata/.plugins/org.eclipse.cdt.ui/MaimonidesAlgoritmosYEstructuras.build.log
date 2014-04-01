@@ -1,1 +1,7 @@
-Info: Nothing to build for MaimonidesAlgoritmosYEstructuras
+12:47:09 **** Rebuild of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+
+12:47:10 Build Finished (took 827ms)
+

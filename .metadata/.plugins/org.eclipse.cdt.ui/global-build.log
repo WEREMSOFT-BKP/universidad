@@ -189,3 +189,31 @@ g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE
 src\ej104.o: In function `main':
 C:\Proyectos\Universidad\ej104\Debug/../src/ej104.cpp:16: undefined reference to `readLong(long&)'
 collect2.exe: error: ld returned 1 exit status
+17:24:41 **** Clean-only build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+rm -rf MaimonidesAlgoritmosYEstructuras.exe src/MaimonidesAlgoritmosYEstructuras.d src/MaimonidesAlgoritmosYEstructuras.o 
+17:24:41 **** Clean-only build of configuration Debug for project ej104 ****
+rm -rf src/ej104.d ej104.exe src/ej104.o 
+17:24:41 **** Rebuild of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+17:24:42 **** Rebuild of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
+src\ej104.o: In function `main':
+C:\Proyectos\Universidad\ej104\Debug/../src/ej104.cpp:16: undefined reference to `readLong(long&)'
+collect2.exe: error: ld returned 1 exit status
+12:47:09 **** Clean-only build of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+rm -rf MaimonidesAlgoritmosYEstructuras.exe src/MaimonidesAlgoritmosYEstructuras.d src/MaimonidesAlgoritmosYEstructuras.o 
+12:47:09 **** Clean-only build of configuration Debug for project ej104 ****
+rm -rf src/ej104.d ej104.exe src/ej104.o 
+12:47:09 **** Rebuild of configuration Debug for project MaimonidesAlgoritmosYEstructuras ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MaimonidesAlgoritmosYEstructuras.o" "..\\src\\MaimonidesAlgoritmosYEstructuras.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\MaimonidesAlgoritmosYEstructuras\\lib" -o MaimonidesAlgoritmosYEstructuras.exe "src\\MaimonidesAlgoritmosYEstructuras.o" -lAyE 
+12:47:10 **** Rebuild of configuration Debug for project ej104 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ej104.o" "..\\src\\ej104.cpp" 
+g++ "-LC:\\Proyectos\\Universidad\\ej104\\lib" -o ej104.exe "src\\ej104.o" -lAyE 
+Info: Nothing to build for ej104
