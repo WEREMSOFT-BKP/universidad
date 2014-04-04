@@ -1556,3 +1556,9 @@ Binding(CTRL+SHIFT+H,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY org.eclipse.equinox.security 1 0 2014-04-04 15:53:37.871
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-04 15:57:00.132
+!MESSAGE Indexed 'ej132' (1 sources, 84 headers) in 2.53 sec: 7,835 declarations; 14,385 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.01%)
