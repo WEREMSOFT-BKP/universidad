@@ -10,33 +10,32 @@
 using namespace std;
 
 int main() {
-	unsigned int i;
-	float t, tMax;
-	long fecha, fechaMax;
+	int dia, i;
+	float t;
+	float tMax;
 
-	for(i = 1; i <= 8640; i++){
-		writeLnString("Ingrese Temperatura");
+	for(i = 0; i <= 8640; i++)
+	{
+		writeLnString("Ingrese la temperatura");
 		readFloat(t);
 
-		writeLnString("Ingrese Hora, Dia, Mes en formato HHDDMM");
-		readLong(fecha);
-
-		if(t > tMax || i == 1){
+		if( t > tMax || i == 0)
+		{
 			tMax = t;
-			fechaMax = fecha;
+			dia = i;
 		}
 	}
 
-	writeString("Temperatura Maxima: ");
+	writeString("Temperatura mas alta: ");
 	writeLnFloat(tMax);
 
-	writeLnString("Registrada: ");
-	writeString("Mes: ");
-	writeLnLong(fechaMax % 100);
+	writeString("Mes ");
+	writeLnInteger(dia / (24*30) + 1);
 
-	writeString("Dia: ");
-	writeLnLong((fechaMax %10000) / 100);
 
-	writeString("Hora: ");
-	writeLnLong(fechaMax / 10000);
+	writeString("Dia ");
+	writeLnInteger((dia % (24*30)) / 24 + 1);
+
+	writeString("Hora ");
+	writeLnInteger((dia % (24*30)) % 24);
 }

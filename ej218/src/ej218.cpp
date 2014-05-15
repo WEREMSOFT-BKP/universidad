@@ -9,7 +9,8 @@
 
 #include "includes\aye.h"
 
-void ingresarDatos(string VAR nombre, short VAR destino, float VAR kgDeEquipaje, int VAR cont);
+string ingresarNombre();
+void ingresarDatos(short VAR destino, float VAR kgDeEquipaje);
 void hayExeso(float);
 float porcentaje(float A, float B);
 
@@ -25,9 +26,10 @@ int main() {
 	sLuis = 0;
 	totalKG = 0;
 
-	ingresarDatos(nombre, destino, kgDeEquipaje, cont);
+	nombre = ingresarNombre();
 
 	while(nombre != ""){
+		ingresarDatos(destino, kgDeEquipaje);
 		switch(destino){
 		case 1:
 			rosario++;
@@ -41,7 +43,8 @@ int main() {
 		}
 
 		totalKG += kgDeEquipaje;
-		ingresarDatos(nombre, destino, kgDeEquipaje, cont);
+		cont++;
+		nombre = ingresarNombre();
 	}
 
 	writeString("Porcentaje de pasajeros a Rosario: ");
@@ -57,13 +60,16 @@ int main() {
 	writeLnFloat(totalKG/cont);
 }
 
-
-void ingresarDatos(string VAR nombre, short VAR destino, float VAR kgDeEquipaje, int VAR cont)
-{
+string ingresarNombre(){
+	string nombre;
 	writeLnString("ingrese el nombre (ENTER para terminar)");
 	readString(nombre);
+	return nombre;
+}
 
-	if(nombre != ""){
+void ingresarDatos(short VAR destino, float VAR kgDeEquipaje)
+{
+
 		writeLnString("Ingrese destino(1 para Rosario, 2 Cordoba, 3 San Luis)");
 		readShort(destino);
 
@@ -71,9 +77,6 @@ void ingresarDatos(string VAR nombre, short VAR destino, float VAR kgDeEquipaje,
 		readFloat(kgDeEquipaje);
 
 		hayExeso(kgDeEquipaje);
-
-		cont++;
-	}
 }
 
 float porcentaje(float A, float B){
