@@ -16,30 +16,39 @@ typedef struct Reg{
 	float deuda;
 };
 
+void mostrar_contenidos(ARCHIVO arch);
+void grabar_registros(ARCHIVO arch);
 
 int main() {
 	ARCHIVO arch;
 
-	arch = fopen("personas.dat", "rw");
+	arch = fopen("c:\\personas.dat", "r+");
 	grabar_registros(arch);
 	mostrar_contenidos(arch);
 	fclose(arch);
 }
 
 void mostrar_contenidos(ARCHIVO arch){
+	writeLnString("mostrando contenidos");
 	Reg reg_a;
 	seekFile(arch, reg_a, 0);
 	while(!feof(arch)){
 		readFile(reg_a, arch);
-		writeChar(reg_a.apellido);
+		writeLnString("apelllido: ");
+		writeCharString(reg_a.apellido);
+		writeLnString("edad: ");
 		writeShort(reg_a.edad);
-		writeChar(reg_a.fech_nac);
+		writeLnString("fecha nacimiento: ");
+		writeCharString(reg_a.fech_nac);
+		writeLnString("dni: ");
 		writeLong(reg_a.dni);
 	}
+	writeLnString("contenidos mostrados");
 }
 
 Reg ingresar_registro(){
 	Reg ret_val;
+	writeLnString("Ingrese el apellido");
 	readCharString(ret_val.apellido);
 	if(strlen(ret_val.apellido) > 0){
 		writeLnString("Ingrese la edad");
@@ -64,8 +73,10 @@ void grabar_registros(ARCHIVO arch){
 	reg_a = ingresar_registro();
 
 	while(strlen(reg_a.apellido) > 0){
+		writeLnString("grabando registro...");
 		writeFile(reg_a, arch);
 		reg_a = ingresar_registro();
+		writeLnString("registro grabado");
 	}
 }
 
