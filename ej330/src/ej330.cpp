@@ -8,13 +8,13 @@
 
 #include "includes/aye.h"
 
-typedef struct Reg{
+typedef struct {
 	char apellido[20];
 	short edad;
 	char fech_nac[8];
 	long dni;
 	float deuda;
-};
+} Reg;
 
 void mostrar_contenidos(ARCHIVO arch);
 void grabar_registros(ARCHIVO arch);
@@ -22,7 +22,7 @@ void grabar_registros(ARCHIVO arch);
 int main() {
 	ARCHIVO arch;
 
-	arch = fopen("personas.dat", "wb");
+	arch = fopen("personas.dat", "wb+");
 	grabar_registros(arch);
 	mostrar_contenidos(arch);
 	fclose(arch);
@@ -33,7 +33,8 @@ void mostrar_contenidos(ARCHIVO arch){
 	Reg reg_a;
 	seekFile(arch, reg_a, 0);
 	while(!feof(arch)){
-		readFile(reg_a, arch);
+		writeLnInteger(sizeof(reg_a));
+		readFile(reg_a, arch);//no carga el contenido en el registro
 		writeString("apelllido: ");
 		writeLnCharString(reg_a.apellido);
 		writeString("edad: ");
