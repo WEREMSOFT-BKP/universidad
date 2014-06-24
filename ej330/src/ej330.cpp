@@ -22,7 +22,7 @@ void grabar_registros(ARCHIVO arch);
 int main() {
 	ARCHIVO arch;
 
-	arch = fopen("c:\\personas.dat", "r+");
+	arch = fopen("personas.dat", "wb");
 	grabar_registros(arch);
 	mostrar_contenidos(arch);
 	fclose(arch);
@@ -34,14 +34,15 @@ void mostrar_contenidos(ARCHIVO arch){
 	seekFile(arch, reg_a, 0);
 	while(!feof(arch)){
 		readFile(reg_a, arch);
-		writeLnString("apelllido: ");
-		writeCharString(reg_a.apellido);
-		writeLnString("edad: ");
-		writeShort(reg_a.edad);
-		writeLnString("fecha nacimiento: ");
-		writeCharString(reg_a.fech_nac);
-		writeLnString("dni: ");
-		writeLong(reg_a.dni);
+		writeString("apelllido: ");
+		writeLnCharString(reg_a.apellido);
+		writeString("edad: ");
+		writeLnShort(reg_a.edad);
+		writeString("fecha nacimiento: ");
+		writeLnCharString(reg_a.fech_nac);
+		writeString("dni: ");
+		writeLnLong(reg_a.dni);
+		writeString("\n");
 	}
 	writeLnString("contenidos mostrados");
 }
