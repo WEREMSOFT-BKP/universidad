@@ -2,9 +2,8 @@
  ============================================================================
  Name        : ej005.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Imprime la tabla de caracteres ASCII, descarta caracteres no
+ imprimibles
  ============================================================================
  */
 

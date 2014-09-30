@@ -2,9 +2,7 @@
  ============================================================================
  Name        : ej004.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Calculadora que opera con números enteros.
  ============================================================================
  */
 

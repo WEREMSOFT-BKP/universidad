@@ -2,9 +2,8 @@
  ============================================================================
  Name        : ej007.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Dibuja un cuadrado con asteriscos, y un triangulo con asteriscos.
+ La función dibujar triangulo se modificó para que dibuje un pino.
  ============================================================================
  */
 

@@ -3,8 +3,8 @@
  Name        : ej003.c
  Author      : Pablo Weremczuk
  Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Prueba de operadores lógicos, muestra el funcionamiento de los
+  mismos aplicados a variables enteras.
  ============================================================================
  */
 

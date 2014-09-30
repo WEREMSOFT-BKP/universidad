@@ -2,8 +2,6 @@
  ============================================================================
  Name        : ej010.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   :
  Description : Ejercicio que imprime factorial sin recursion.
  ============================================================================
  */

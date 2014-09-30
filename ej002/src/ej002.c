@@ -2,9 +2,8 @@
  ============================================================================
  Name        : ej002.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Calcula la suma de 2 valores ingresados por teclado utilizando
+ una función.
  ============================================================================
  */
 

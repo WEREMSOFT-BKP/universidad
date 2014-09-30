@@ -2,8 +2,6 @@
  ============================================================================
  Name        : ej009.c
  Author      : Pablo Weremczuk
- Version     :
- Copyright   :
  Description : Ejercicio que convierte mayuscula a minuscula
  ============================================================================
  */
