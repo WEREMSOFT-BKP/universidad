@@ -13,18 +13,51 @@
 
 void dibujarTriangulo(int lado);
 void dibujarCuadrado(int lado);
+int mostrarMenuYObtenerSeleccion(void);
+int pedirLado(void);
 
 int main(void) {
-	int lado = 0;
-	printf("Ingrese el tamaño del cuadrado: ");
-	scanf("%d", &lado);
+	int opcion = 0;
 
-	dibujarTriangulo(lado);
-	printf("\n");
-	dibujarCuadrado(lado);
+	do
+	{
+		opcion = mostrarMenuYObtenerSeleccion();
 
 
+		switch(opcion)
+		{
+		case 1:
+			dibujarCuadrado(pedirLado());
+			break;
+		case 2:
+			dibujarTriangulo(pedirLado());
+			break;
+		}
+	}while(opcion != 0);
 	return 0;
+}
+
+int pedirLado(void)
+{
+	int returnValue;
+	printf("Ingrese el tamaño: ");
+	scanf("%d", &returnValue);
+	return returnValue;
+}
+
+int mostrarMenuYObtenerSeleccion(void)
+{
+	int returnValue;
+	printf("\nIngrese:");
+	printf("\n\t1. para dibujar un cuadrado.");
+	printf("\n\t2. para dibujar un triangulo.");
+	printf("\n\t0. para dibujar salir.");
+
+	printf("\n\n\tOpción:");
+	scanf("%d", &returnValue);
+
+	return returnValue;
+
 }
 
 
