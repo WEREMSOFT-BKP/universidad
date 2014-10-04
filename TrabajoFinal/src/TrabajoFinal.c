@@ -76,7 +76,7 @@ void mostrarLaberinto(Laberinto *pLaberinto)
 	{
 		for(j = 0; j < pLaberinto->ancho; j++)
 		{
-			printf("%c ", pLaberinto->arrDatos[i][j]);
+			printf("%c", pLaberinto->arrDatos[i][j]);
 		}
 		printf("\n");
 	}
