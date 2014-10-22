@@ -3,134 +3,68 @@
  Name        : TrabajoFinal.c
  Author      : Pablo Weremczuk
  Version     :
- Copyright   : Trabajo Final: Simulación de robots de rescate.
- Description : Hello World in C, Ansi-style
+ Description : Trabajo Final: Simulación de robots de rescate.
+ Estrategia de resolución:
+ El heroe siempre solo puede avanzar o girar. En cada ciclo, realiza las
+ siguientes acciones:
+
+
+ 1. Mira hacia su izquierda.
+ 2. si a su izquierda no hay una pared, gira hacia si izquierda y avanza un casillero.
+ 3. si a su izquierda si hay una pared, mira hacia adelante.
+ 4. si hadelante no hay una pared, avanza un casillero
+ 5. si adelante hay una pared, mira ha su derecha.
+ 6. si a su derecha no hay pared, gira 90 grados a su derecha y avanza un casillero.
+ 7. si a su derecha hay una pared, mira hacia atras.
+ 8. si hacia atras no hay una pared, gira 180 grados y avanza un casillero.
+ 9. si al mirar cualqueira de los casilleros encuentra la salida, termina la ejecución.
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-#define DELAY 100000
-
-typedef struct  {
-	char arrDatos[100][100];
-	int ancho;
-	int alto;
-} Laberinto;
-
-void delay(int seconds);
-int mostrarMenuYRegistrarOpcion();
-int cargarLaberinto(Laberinto *pLaberinto);
-void mostrarLaberinto(Laberinto *pLaberinto);
-void resolverLaberinto(Laberinto *pLaberinto);
-void configurar(Laberinto *pLaberinto);
+#include "includes\tipos.h"
+#include "includes\heroFunctions.h"
+#include "includes\miscFunctions.h"
+#include "includes\labirintFunctions.h"
+#include "includes\menuFunctions.h"
 
 int main(void) {
-	int opcion;
+
 	Laberinto laberinto;
 
-	laberinto.ancho = 10;
-	laberinto.alto = 10;
+	Scope scope;
 
-	cargarLaberinto(&laberinto);
+	scope.laberinto = &laberinto;
+
+	scope.laberinto->maxAncho = 100;
+	scope.laberinto->maxAncho = 100;
+
+	cargarLaberinto(scope.laberinto);
+
 	do
 	{
-		opcion = mostrarMenuYRegistrarOpcion();
-		switch(opcion)
+		switch(scope.state)
 		{
-		case 1:
-			resolverLaberinto(&laberinto);
+		case STATE_MENU:
+			processStateMenu(&scope);
 			break;
-		case 2:
-			configurar(&laberinto);
-			break;
-		case 3:
-			mostrarLaberinto(&laberinto);
+		case STATE_SOLVING:
+			processStateSolving(&scope);
 			break;
 		}
-	}while(opcion != 0);
 
-
-
+	}while(scope.opcion != 0);
 	return 0;
 }
 
-void configurar(Laberinto *pLaberinto)
-{
-	printf("Se seleccionó configurar. Presione una tecla.\n\n");
-	getch();
-}
-
-void resolverLaberinto(Laberinto *pLaberinto)
-{
-	printf("Se seleccionó resolver laberinto. Presione una tecla.\n\n");
-	getch();
-}
-
-void mostrarLaberinto(Laberinto *pLaberinto)
-{
-	int j, i;
-	for(i = 0; i < pLaberinto->alto; i++)
-	{
-		for(j = 0; j < pLaberinto->ancho; j++)
-		{
-			printf("%c", pLaberinto->arrDatos[i][j]);
-		}
-		printf("\n");
-	}
-	printf("\n");
-	printf("\n");
-	printf("\n");
-}
-
-int cargarLaberinto(Laberinto *pLaberinto)
-{
-	int i, j;
-	char data[6][10] =  {{'X', 'X', 'X', 'X', 'X', 'I', 'X', 'X', 'X', 'X'},
-			{'X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ', 'X'},
-			{'X', ' ', ' ', ' ', ' ', ' ', 'X', 'X', 'X', 'X'},
-			{'X', 'X', ' ', ' ', ' ', ' ', 'X', ' ', ' ', 'X'},
-			{'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X'},
-			{'X', 'X', 'X', 'X', 'X', 'O', 'X', 'X', 'X', 'X'}};
-
-	for(i = 0; i < sizeof(data[0]); i++)
-	{
-		for(j = 0; j < sizeof(data) / sizeof(data[0]); j++)
-		{
-			pLaberinto->arrDatos[j][i] = data[j][i];
-		}
-	}
-
-	pLaberinto->ancho = sizeof(data[0]);
-	pLaberinto->alto = sizeof(data) / sizeof(data[0]);
-
-	return 0;
-}
-
-int mostrarMenuYRegistrarOpcion()
-{
-	int returnValue;
-	printf("Proyecto Simulación de Robots de Rescate\n");
-	printf("========================================\n\n");
-
-	printf("0. Salir\n");
-	printf("1. Resolver\n");
-	printf("2. Configurar\n");
-	printf("3. Mostrar Laberinto\n");
-
-	printf("\nSeleccione una opcion: ");
-	scanf("%d", &returnValue);
-	return returnValue;
-}
 
 
-void delay(int seconds)
-{
-	int i = seconds * 1000;
-	while(i--)
-	{
 
-	}
-}
+
+
+
+
+
+
+
+
