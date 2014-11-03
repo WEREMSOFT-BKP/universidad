@@ -17,6 +17,13 @@
 #define STATE_MENU  0
 #define STATE_SOLVING 1
 
+#define NORTE 1
+#define SUR 2
+#define ESTE 3
+#define OESTE 4
+
+#define POR_DERECHA 1;
+#define POR_IZQUIERDA 2;
 
 
 typedef struct  {
@@ -25,24 +32,34 @@ typedef struct  {
 	int maxAlto;
 	int ancho;
 	int alto;
+	int entradaX;
+	int entradaY;
 } Laberinto;
 
 typedef struct  {
-	char orientacion;
+	int velocidadX;
+	int velocidadY;
 	int avatar;
+	int orientacion;
 	int x;
 	int y;
 } Heroe;
 
 typedef struct
 {
+	int delay;
+	int metodo;
+} Config;
+
+typedef struct
+{
 	char screenBuffer[80*25];
 	int opcion;
 	int state;
-	Heroe *heroe;
-	Laberinto *laberinto;
+	Heroe heroe;
+	Config config;
+	Laberinto laberinto;
 } Scope;
-
 
 
 #endif /* TIPOS_H_ */

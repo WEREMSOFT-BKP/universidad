@@ -27,19 +27,22 @@
 #include "includes\miscFunctions.h"
 #include "includes\labirintFunctions.h"
 #include "includes\menuFunctions.h"
+#include "includes\stateFunctions.h"
 
 int main(void) {
-
-	Laberinto laberinto;
-
 	Scope scope;
 
-	scope.laberinto = &laberinto;
+	scope.laberinto.maxAncho = 100;
+	scope.laberinto.maxAlto = 100;
 
-	scope.laberinto->maxAncho = 100;
-	scope.laberinto->maxAncho = 100;
 
-	cargarLaberinto(scope.laberinto);
+	Laberinto *laberinto; //necesito que esta variable este por temas de debug.
+
+	laberinto = &scope.laberinto;
+
+	scope.heroe.orientacion = SUR;
+
+	inicializar(&scope);
 
 	do
 	{
