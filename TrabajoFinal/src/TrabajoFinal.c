@@ -41,6 +41,7 @@ int main(void) {
 	laberinto = &scope.laberinto;
 
 	scope.heroe.orientacion = SUR;
+	scope.config.delay = RAPIDO;
 
 	inicializar(&scope);
 

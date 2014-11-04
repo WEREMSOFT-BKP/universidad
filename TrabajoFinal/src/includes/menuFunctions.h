@@ -11,6 +11,7 @@
 void processStateMenu(Scope *scope);
 void processStateSolving(Scope *scope);
 int mostrarMenuYRegistrarOpcion();
-void configurar(Scope *pScope);
-
+void configurar(Config *pConfig);
+int mostrarMenuConfigurarVelocidadYRegistrarOpcion();
+void configurarVelocidad(Config *pConfig);
 #endif /* MENUFUNCTIONS_H_ */

@@ -16,18 +16,58 @@
 
 int mostrarMenuYRegistrarOpcion()
 {
-	int returnValue;
-	system("cls");
-	printf("Proyecto Simulación de Robots de Rescate\n");
-	printf("========================================\n\n");
+	int returnValue = -1;
+	int primeraVez = 0;
+	int validation = -1;
+	while(!(returnValue >= 0 && returnValue <=3) || validation != 1)
+	{
+		if(primeraVez != 0)
+		{
+			printf("Opción no válida\n");
+			clearKeyboardBuffer();
+		}
+		system("cls");
+		printf("Proyecto Simulación de Robots de Rescate\n");
+		printf("========================================\n\n");
 
-	printf("0. Salir\n");
-	printf("1. Resolver\n");
-	printf("2. Configurar\n");
-	printf("3. Mostrar Laberinto\n");
+		printf("0. Salir\n");
+		printf("1. Resolver\n");
+		printf("2. Configurar\n");
+		printf("3. Mostrar Laberinto\n");
 
-	printf("\nSeleccione una opcion: ");
-	scanf("%d", &returnValue);
+		printf("\nSeleccione una opcion: ");
+		validation = scanf("%d", &returnValue);
+		clearKeyboardBuffer();
+		primeraVez++;
+	}
+	return returnValue;
+}
+
+int mostarMenuConfiguracionYRegistrarOpcion()
+{
+	int returnValue = -1;
+	int primeraVez = 0;
+	int validation = -1;
+	while(!(returnValue >= 0 && returnValue <= 1) || validation != 1)
+	{
+		if(primeraVez != 0)
+		{
+			validation = -1;
+			printf("Opción no válida\n");
+			clearKeyboardBuffer();
+		}
+		system("cls");
+		printf("Configuracion\n");
+		printf("=============\n\n");
+
+		printf("0. Velocidad de resolucion paso a paso\n");
+		printf("1. Volver\n");
+
+		printf("\nSeleccione una opcion: ");
+		validation = scanf("%d", &returnValue);
+		clearKeyboardBuffer();
+		primeraVez++;
+	}
 	return returnValue;
 }
 
@@ -54,7 +94,7 @@ void processStateSolving(Scope *pScope)
 {
 	pScope->heroe.x = pScope->laberinto.entradaX;
 	pScope->heroe.y = pScope->laberinto.entradaY;
-
+	pScope->heroe.orientacion = SUR;
 	char casillero = '\0';
 
 	while(casillero != 'O' && casillero != 'I')
@@ -84,55 +124,76 @@ void processStateSolving(Scope *pScope)
 		mostrarLaberinto(pScope);
 		putCasilleroXYScreen(pScope->heroe.x, pScope->heroe.y, '@', pScope);
 		flushScreen(pScope);
-		delay(10000);
+		delay(pScope->config.delay);
 	}
 	if(casillero == 'I')
 	{
 		printf("El robot volvió al punto de partida sin encontrar la salida. El laberinto no tiene solución\n");
-		getchar();
-		getchar();
+		clearKeyboardBuffer();
 	}
 	passToStateMenu(pScope);
 }
 
-void configurar(Scope *pScope)
+void configurar(Config *pConfig)
 {
 	int opcion = -1;
 	do
 	{
-		opcion = mostrarMenuYRegistrarOpcion();
+		opcion = mostarMenuConfiguracionYRegistrarOpcion();
 		switch(opcion)
 		{
 		case 0:
-			configurarVelocidad(pScope->config);
+			configurarVelocidad(pConfig);
 			break;
-		case 1:
-			configurarMetodoResolucion(pScope->config);
-			break;
-		case 2:
-			cargarLaberinto(&pScope->laberinto);
 		}
-	}while(opcion != 3);
+	}while(opcion != 1);
 }
 
 void configurarVelocidad(Config *pConfig)
 {
-	mostrarMenuConfigurarVelocidadYRegistrarOpcion()
+	int opcion = mostrarMenuConfigurarVelocidadYRegistrarOpcion();
+	{
+		switch(opcion)
+		{
+		case 0:
+			pConfig->delay = LENTO;
+			break;
+		case 1:
+			pConfig->delay = MEDIO;
+			break;
+		case 2:
+			pConfig->delay = RAPIDO;
+			break;
+		}
+	}
 }
 
-int mostarMenuConfiguracionYRegistrarOpcion()
+
+
+int mostrarMenuConfigurarVelocidadYRegistrarOpcion()
 {
-	int returnValue;
-	system("cls");
-	printf("Configuracion\n");
-	printf("=============\n\n");
+	int returnValue = -1;
+	int primeraVez = 0;
+	int validation = -1;
+	while(!(returnValue >= 0 && returnValue <=2) || validation != 1)
+	{
+		if(primeraVez != 0)
+		{
+			printf("Opción no válida\n");
+			clearKeyboardBuffer();
+		}
+		system("cls");
+		printf("Seleccione velocidad de resolcion paso a paso\n");
+		printf("=============================================\n\n");
 
-	printf("0. Velocidad de resolucion paso a paso\n");
-	printf("1. Metodo de resolucion\n");
-	printf("2. Volver a cargar archivo .map\n");
-	printf("3. Volver\n");
+		printf("0. Lento\n");
+		printf("1. Medio\n");
+		printf("2. Rapido\n");
 
-	printf("\nSeleccione una opcion: ");
-	scanf("%d", &returnValue);
+		printf("\nSeleccione una opcion: ");
+		validation = scanf("%d", &returnValue);
+		clearKeyboardBuffer();
+		primeraVez++;
+	}
 	return returnValue;
 }

@@ -14,5 +14,6 @@ int putCasilleroXY(int x, int y, char pCaracter, Laberinto *pLaberinto);
 int putCasilleroXYScreen(int x, int y, char pCaracter, Scope *pScope);
 void flushScreen(Scope *pScope);
 void inicializar(Scope *pScope);
+void clearKeyboardBuffer();
 
 #endif /* MISCFUNCTIONS_H_ */

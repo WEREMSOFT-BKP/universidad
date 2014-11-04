@@ -25,6 +25,10 @@
 #define POR_DERECHA 1;
 #define POR_IZQUIERDA 2;
 
+#define LENTO 100000;
+#define MEDIO 10000;
+#define RAPIDO 50;
+
 
 typedef struct  {
 	char arrDatos[10000];

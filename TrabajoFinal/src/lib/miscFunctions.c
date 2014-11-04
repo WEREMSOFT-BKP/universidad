@@ -7,6 +7,11 @@
 #include "../includes/tipos.h"
 #include "../includes/labirintFunctions.h"
 
+void clearKeyboardBuffer()
+{
+	while ( getchar() != '\n' );
+}
+
 void delay(int seconds)
 {
 	int i = seconds * 1000;
@@ -20,13 +25,12 @@ char getCasilleroXY(int x, int y, Laberinto *pLaberinto)
 {
 	char returnValue = '\0';
 	int offset = y * pLaberinto->ancho + x;
-	if(1 == 1)
+	if(offset < pLaberinto->ancho * pLaberinto->alto)
 	{
 		returnValue = pLaberinto->arrDatos[offset];
 	}else
 	{
-		printf("Error, las coordenadas superan las dimensiones máximas del laberinto");
-		returnValue = -1;
+		returnValue = 'X';
 	}
 	return returnValue;
 }

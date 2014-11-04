@@ -47,9 +47,11 @@ int cargarLaberinto(Laberinto *pLaberinto)
 			break;
 		}
 	}
-	pLaberinto->alto = fileSize / i;
+	pLaberinto->alto = fileSize / i - 1;
 
-	for(i = 0; i<pLaberinto->arrDatos[i]; i++)
+	int largo = (sizeof pLaberinto->arrDatos);
+
+	for(i = 0; i< largo ; i++)
 	{
 		if(pLaberinto->arrDatos[i] == 'I')
 		{
